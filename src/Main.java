@@ -33,6 +33,7 @@ public class Main {
 			AnnotatedVariable array1 = new AnnotatedVariable("array1", "array", null, null);
 			AnnotatedVariable array2 = new AnnotatedVariable("array2", "array", null, "box");
 			AnnotatedVariable array_as_binary_tree = new AnnotatedVariable("array_as_binary_tree", "array", "binary_tree", null);
+					array_as_binary_tree.attributes.put("maxSize", 7);
 			AnnotatedVariable tree1 = new AnnotatedVariable("tree1", "tree", null, null);
 			
 			//Populate map

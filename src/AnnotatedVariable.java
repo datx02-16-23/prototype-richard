@@ -25,8 +25,7 @@ public class AnnotatedVariable {
 	 */
 	public final String visual;
 	/**
-	 * A map of attribute names and their values for this variable.
-	 * Inheriting classes should provide methods to populate this map.
+	 * A map of attribute names and their values for this variable, such as maximum size.
 	 */
 	public final HashMap<String, Object> attributes;
 	

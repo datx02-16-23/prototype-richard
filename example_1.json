@@ -12,7 +12,9 @@
         "identifier": "array_as_binary_tree",
         "rawType": "array",
         "abstractType": "binary_tree",
-        "attributes": {}
+        "attributes": {
+          "maxSize": 7
+        }
       },
       "array1": {
         "identifier": "array1",
