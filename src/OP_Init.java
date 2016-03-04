@@ -1,32 +1,49 @@
-package wrapper_draft3;
-
 import java.util.Arrays;
 import java.util.HashMap;
 
+/**
+ * Creates an operation to initialize an {@code AnnotatedVariable}.
+ */
 public class OP_Init extends Operation{
 	private static final String OPERATION = "init";
-	private static final String KEY_DESTINATION = "destination";
+	private static final String KEY_TARGET = "target";
 	private static final String KEY_SIZE = "size";
 	private static final String KEY_VALUE = "value";
 
+	/**
+	 * Creates a new Init operation. Note that you must set the target, maxSize and initial values.
+	 */
 	public OP_Init() {
 		super(OPERATION, new HashMap<String, Object>());
 	}
 	
-	public void setDestination(Variable_Array var){
-		this.operationBody.put(KEY_DESTINATION, var);
+	/**
+	 * Set the target variable for this Init operation.
+	 * The identifier of the variable should be previously declared in the header.
+	 * @param var The target variable for this Init operation.
+	 */
+	public void setTarget(ArrayVariable var){
+		this.operationBody.put(KEY_TARGET, var);
 	}
 	
+	/**
+	 * Set the declared maximum size of this variable, for each dimension.
+	 * @param size The declared maximum size of this variable.
+	 */
 	public void setSize(int [] size){
 		this.operationBody.put(KEY_SIZE, size);
 	}
 	
+	/**
+	 * Set the value(s) with which to initialize this variable.
+	 * @param value The value(s) with which to initialize this variable.
+	 */
 	public void setValue(String value){
 		this.operationBody.put(KEY_VALUE, value);
 	}
 	
-	public Variable_Array getDestination(){
-		return (Variable_Array)this.operationBody.get(KEY_DESTINATION);
+	public ArrayVariable getTarget(){
+		return (ArrayVariable)this.operationBody.get(KEY_TARGET);
 	}
 	
 	public int[] getSize(){
@@ -43,8 +60,8 @@ public class OP_Init extends Operation{
 		for( String key : operationBody.keySet()){
 			builder.append("\""+key+"\": ");
 			switch(key){
-				case KEY_DESTINATION:
-					builder.append(((Variable_Array)operationBody.get(key)).toString() +",\n");
+				case KEY_TARGET:
+					builder.append(((ArrayVariable)operationBody.get(key)).toString() +",\n");
 				break;
 				case KEY_SIZE:
 					builder.append(Arrays.toString((int[])operationBody.get(key))+",\n");

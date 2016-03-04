@@ -1,0 +1,103 @@
+{
+  "header": {
+    "version": 1,
+    "annotatedVariables": {
+      "array2": {
+        "identifier": "array2",
+        "rawType": "array",
+        "visual": "box",
+        "attributes": {}
+      },
+      "array_as_binary_tree": {
+        "identifier": "array_as_binary_tree",
+        "rawType": "array",
+        "abstractType": "binary_tree",
+        "attributes": {}
+      },
+      "array1": {
+        "identifier": "array1",
+        "rawType": "array",
+        "attributes": {}
+      },
+      "tree1": {
+        "identifier": "tree1",
+        "rawType": "tree",
+        "attributes": {}
+      }
+    }
+  },
+  "body": [
+    {
+      "operation": "init",
+      "operationBody": {
+        "size": [
+          5
+        ],
+        "value": "[1,2,3,4,5]",
+        "target": {
+          "identifier": "array1"
+        }
+      }
+    },
+    {
+      "operation": "init",
+      "operationBody": {
+        "size": [
+          7
+        ],
+        "value": "[3,4,5,6,7,8,9]",
+        "target": {
+          "identifier": "tree1"
+        }
+      }
+    },
+    {
+      "operation": "init",
+      "operationBody": {}
+    },
+    {
+      "operation": "init",
+      "operationBody": {}
+    },
+    {
+      "operation": "read",
+      "operationBody": {
+        "source": {
+          "identifier": "array1",
+          "index": [
+            3
+          ]
+        },
+        "value": "1337",
+        "target": {
+          "identifier": "array2",
+          "index": [
+            7
+          ]
+        }
+      }
+    },
+    {
+      "operation": "write",
+      "operationBody": {}
+    },
+    {
+      "operation": "swap",
+      "operationBody": {
+        "var2": {
+          "identifier": "array2",
+          "index": [
+            0
+          ]
+        },
+        "var1": {
+          "identifier": "array1",
+          "index": [
+            0
+          ]
+        },
+        "value": "[3, 1]"
+      }
+    }
+  ]
+}
